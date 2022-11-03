@@ -1,10 +1,11 @@
-import { BrowserRouter, Link, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Users from "./components/Users";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Page404 from "./components/Page404";
 import ErrorBoundary from "./components/ErrorBoundary";
+import Visit from "./components/Visit"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Link to="/Users">Users</Link>
           <Link to="/About">About</Link>
           <Link to="/Contact">Contact</Link>
+          
 
         </nav>
         <ErrorBoundary>
@@ -23,7 +25,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Users" element={<Users />} />
             <Route path="/About" element={<About />} />
-            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Contact" element={<Contact />}>
+              <Route path="Visit" element={<Visit />} />
+            </Route>
             <Route path="/*" element={<Page404 />} />
           </Routes>
         </ErrorBoundary>
