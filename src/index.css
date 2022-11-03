@@ -77,7 +77,7 @@ button{
   font-weight: 400;
   font-size: 100px;
   text-align: center;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
 }
 .Contactbody{
   color: #000000;
@@ -139,6 +139,11 @@ button{
   text-align: center;
   margin-top: 20px;
   margin-bottom: 200px;
+}
+.Visit{
+  color: #000000;
+  text-align: center;
+  font-size: 24px;
 }
 
 
